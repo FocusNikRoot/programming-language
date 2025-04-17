@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сервис</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="loader">
+    <div class="loader-container">
+      <ul>
+        <h3>Гномы работают в поте лица</h3>
+        <div class="loader-bar">
+          <div class="loader-fill"></div>
+        </div>
+      </ul>
+    </div>
+  </section>
+
+  <main id="page">
+    <div class="centerer-container">
+      <!-- Добро пожаловать -->
+
+      <section id="frame_1" class="registration" class="invisible">
+        <p>Добро пожаловать в <span>Сервис</span>!</p>
+        <small>Для продолжения нужно зарегистрироваться</small>
+        <button type="button" onclick="toRegistration()">Регистрация</button>
+      </section>
+      <!-- Первый сектор регистрации -->
+
+      <section id="registration-step-1" class="invisible">
+        <h2>Шаг 1. Персональные данные</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="surname">Фамилия:</label>
+            <input type="text" id="surname" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="country">Страна:</label>
+            <input type="text" id="country" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Адрес:</label>
+            <input type="text" id="address" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Подтвердите пароль:</label>
+            <input type="password" id="confirm-password" required>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel-1" onclick="refreshPage()">Отмена</button>
+            <button type="button" id="btn-continue-1" class="btn-continue-1" disabled onclick="toSecondStep()">Далее</button>
+          </div>
+        </form>
+      </section>
+      <!-- Второй сектор регистрации -->
+
+      <section id="registration-step-2" class="invisible">
+        <h2>Шаг 2. Телефонный номер</h2>
+        <p>В целях безопасности Сервису нужно подтверждение вашего телефонного номера. На ваш номер будет отправлен 4-значный код подтверждения.</p>
+        <form>
+          <div class="form-group">
+            <label for="phone-number">Телефонный номер:</label>
+            <input type="text" id="phone-number" pattern="\d{11}" required>
+          </div>
+          <div class="form-group">
+            <label for="verification-code">Код подтверждения:</label>
+            <input type="text" id="verification-code" pattern="\d{4}" required>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel-2" onclick="refreshPage()">Отмена</button>
+            <button type="button" id="btn-continue-2" class="btn-continue-2" disabled onclick="toLastStep()">Далее</button>
+          </div>
+        </form>
+      </section>
+      <!-- Третий сектор регистрации -->
+
+      <section id="registration-step-3" class="inbisible">
+        <div class="centerer-container">
+          <ul>
+            <h2>Шаг 3. Метод оплаты</h2>
+            <p>Для совершения покупок в Сервисе необходимо подключить банковскую карту.</p>
+            <form>
+              <div class="form-group card-number-group">
+                <label for="card-number-1">Номер карты:</label>
+                <div class="card-number-fields">
+                  <input type="text" id="card-number-1" maxlength="4" pattern="\d{4}" required>
+                  <input type="text" id="card-number-2" maxlength="4" pattern="\d{4}" required>
+                  <input type="text" id="card-number-3" maxlength="4" pattern="\d{4}" required>
+                  <input type="text" id="card-number-4" maxlength="4" pattern="\d{4}" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="expiration-date">Срок действия:</label>
+                <input type="text" id="expiration-date" pattern="\d{2}/\d{2}" required>
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" pattern="\d{3}" required>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terms-checkbox" required>
+                <label class="form-check-label" for="terms-checkbox">
+                  Я согласен с любыми условиями, ничего не хочу читать, дайте мне уже пользоваться сервисом
+                </label>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn-cancel-3" onclick="refreshPage()">Отмена</button>
+                <button type="button" id="btn-continue-3" class="btn-continue-3" disabled onclick="completeRegistration()">Завершить</button>
+              </div>
+            </form>
+          </ul>
+        </div>
+      </section>
+      <!-- Конец регистрации -->
+
+      <section id="registration-complete" class="registration" class="invisible">
+        <div class="success-message">
+          <h2>Поздравляем!</h2>
+          <p>Регистрация успешно завершена!</p>
+          <p>Благодарим за использование нашего сервиса.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

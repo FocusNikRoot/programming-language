@@ -1,12 +1,13 @@
+const buttonElement = document.getElementById('button-to-hide');
+const textElement = document.getElementById('text');
+
 function hideText() {
-    const textElement = document.getElementById('text');
     if (textElement) {
         textElement.style.display = 'none';
     }
 }
 
 function hideButton() {
-    const buttonElement = document.getElementById('button-to-hide');
     if (buttonElement) {
         buttonElement.style.display = 'none';
     }

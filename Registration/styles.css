@@ -1,0 +1,122 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.loader-container h3 {
+  margin-left: 30px;
+}
+
+.loader-bar {
+  width: 300px;
+  height: 20px;
+  background-color: #d0d0d0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  width: 0%;
+  height: 100%;
+  background-color: #101010;
+  animation: loader-fill 2s ease-in-out;
+}
+
+@keyframes loader-fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.invisible {
+  display: none !important;
+}
+
+.centerer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.registration {
+  background-color: #121215;
+  display: grid;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: #d0d0d0;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.registration p, small, h2 {
+  margin: 30px;
+}
+
+.registration button {
+  align-self: center;
+  background-color: dimgray;
+  font-size: medium;
+  border-radius: 25px;
+  margin: 30px;
+  color: blanchedalmond;
+}
+
+.registration button:hover {
+  background-color: rgb(56, 56, 56);
+  font-size: medium;
+  border-radius: 25px;
+  margin: 30px;
+  color: blanchedalmond;
+}
+
+.form-group {
+  background-color: #121215;
+  display: grid;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: #d0d0d0;
+  border-radius: 25px;
+  margin: 20px;
+}
+
+.form-group label {
+  margin-left: 15px;
+}
+
+.form-actions {
+  background-color: rgb(56, 56, 56);
+  font-size: medium;
+  border-radius: 25px;
+  margin: 30px;
+  color: blanchedalmond;
+}
+
+.form-actions button {
+  background-color: dimgray;
+  font-size: medium;
+  border-radius: 25px;
+  margin: 30px;
+  color: blanchedalmond;
+}
+
+.form-actions button:hover {
+  background-color: rgb(56, 56, 56);
+  font-size: medium;
+  border-radius: 25px;
+  margin: 30px;
+  color: blanchedalmond;
+}
+
+.form-actions button:disabled {
+  display: none;
+}
