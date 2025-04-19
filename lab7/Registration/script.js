@@ -1,4 +1,5 @@
   const loaderSection = document.getElementById('loader');
+  const textLoadSection = document.getElementById('load');
   const welcomeSection = document.getElementById('frame_1');
   const registrationOneSection = document.getElementById('registration-step-1')
   const registrationTwoSection = document.getElementById('registration-step-2')
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(() => {
     loaderSection.style.display = 'none';
+    textLoadSection.style.display = 'none';
     welcomeSection.classList.remove('invisible');
   }, 2000);
 });
