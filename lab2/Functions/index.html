@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            margin: 5px 0px 5px 0px;
+            padding: 1px 10px 1px 10px;
+        }
+    </style>
+    <script src="1/script.js"></script>
+    <script src="2/script.js"></script>
+    <script src="3/script.js"></script>
+    <script src="5/script.js"></script>
+    <script src="6/script.js"></script>
+    <script src="7/script.js"></script>
+</head>
+<body>
+<h2>Первое задание</h2>
+<label for="OneNumberInput1">Введите 2 числа: </label>
+<input type="number" id="OneNumberInput1" placeholder="Уменьшаемое">
+<input type="number" id="OneNumberInput2" placeholder="Вычетаемое">
+<button onclick="OneDisplayInfo()">Вычесть</button>
+
+<div id="OneOutput"></div>
+
+<h2>Второе задание</h2>
+<label for="TwoNumberInput1">Введите ваш возраст: </label>
+<input type="number" id="TwoNumberInput1">
+<button onclick="TwoDisplayInfo()">Поприветсвовать</button>
+
+<dialog id="TwoDialog">
+    <div id="TwoOutput"></div>
+    <button id="TwoCloseDialog">Закрыть</button>
+</dialog>
+
+<h2>Третье задание</h2>
+<label for="OneNumberInput1">Введите 3 числа:</label>
+<input type="number" id="ThreeNumberInput1" placeholder="1-ое число">
+<input type="number" id="ThreeNumberInput2" placeholder="2-ое число">
+<input type="number" id="ThreeNumberInput3" placeholder="3-е число">
+<button onclick="ThreeDisplayInfo()">Нажми!</button>
+
+<div id="ThreeOutput"></div>
+
+<h2>Пятое задание</h2>
+<label>Введите значение переменных: </label>
+<input type="number" id="FiveInput1" placeholder="x">
+<input type="number" id="FiveInput2" placeholder="y">
+<input type="number" id="FiveInput3" placeholder="z">
+<button onclick="FiveDisplayInfo()">Вычислить</button>
+
+<div id="FiveOutput"></div>
+
+<h2>Шестое задание</h2>
+<label>Введите координаты вершин(x, y): </label>
+<div id="SixInputs">
+
+</div>
+<button onclick="SixAddInput()">Добавить вершину</button>
+<button onclick="SixDisplayInfo()">Вычислить периметр</button>
+
+<div id="SixOutput"></div>
+
+<h2>Седьмое задание</h2>
+<label>Введите число: </label>
+<input type="number" id="SevenInput">
+<button onclick="SevenDisplayInfo()">Нажми!</button>
+
+<div id="SevenOutput"></div>
+</body>
+</html>

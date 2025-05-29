@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Requests</title>
+</head>
+<body>
+  <h1>API Requests</h1>
+  <div id="cat-fact"></div>
+  <div id="chuck-norris-joke"></div>
+  <div id="trivia-question"></div>
+  <div id="pokemon-name"></div>
+  <div id="star-wars-character"></div>
+  <div id="error-message"></div>
+
+  <script>
+    function request(url, callback) {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          callback(JSON.parse(xhr.responseText));
+        } else {
+          console.error(`Error fetching ${url}: ${xhr.status} - ${xhr.statusText}`);
+        }
+      };
+      xhr.send();
+    }
+
+    function makeRequests() {
+      request('https://cat-fact.herokuapp.com/facts/random', (data) => {
+        document.getElementById('cat-fact').innerHTML = `<h2>Cat Fact:</h2><p>${data.text}</p>`;
+      });
+
+      request('https://api.chucknorris.io/jokes/random', (data) => {
+        document.getElementById('chuck-norris-joke').innerHTML = `<h2>Chuck Norris Joke:</h2><p>${data.value}</p>`;
+      });
+
+      request('https://opentdb.com/api.php?amount=1', (data) => {
+        document.getElementById('trivia-question').innerHTML = `<h2>Trivia Question:</h2><p>${data.results[0].question}</p>`;
+      });
+
+      request('https://pokeapi.co/api/v2/pokemon/1', (data) => {
+        document.getElementById('pokemon-name').innerHTML = `<h2>Pokémon Name:</h2><p>${data.name}</p>`;
+      });
+
+      request('https://swapi.dev/api/people/1', (data) => {
+        document.getElementById('star-wars-character').innerHTML = `<h2>Star Wars Character:</h2><p>${data.name}</p>`;
+      });
+    }
+
+    makeRequests();
+  </script>
+</body>
+</html>

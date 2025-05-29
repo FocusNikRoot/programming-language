@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интересные факты о животных</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="wellcome-massage">Добро пожаловать, </h1><h1 id="user-name"></h1>
+    <div class="button-container">
+      <button id="generate-name">Предложить другое имя</button>
+      <button id="continue">Далее</button>
+    </div>
+    <div id="animal-list" class="hidden">
+      <h2>На чьей ты стороне?</h2>
+      <ul>
+        <li>
+          <input type="radio" name="animal" value="cat" id="cat">
+          <label for="cat">Коты</label>
+        </li>
+        <li>
+          <input type="radio" name="animal" value="dog" id="dog">
+          <label for="dog">Собаки</label>
+        </li>
+        <li>
+          <input type="radio" name="animal" value="fox" id="fox">
+          <label for="bird">Птички</label>
+        </li>
+      </ul>
+    </div>
+    <div id="animal-info" class="hidden">
+      <img id="animal-image" src="" alt="">
+      <p id="animal-fact"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
